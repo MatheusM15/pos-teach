@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches:
-      - main # Mude para o nome da sua branch principal, se necessário
+      ['*'] 
   pull_request:
     branches:
-      - main # Mude para o nome da sua branch principal, se necessário
+      ['*'] 
 
 jobs:
   CI:
@@ -15,6 +15,7 @@ jobs:
 
   CD:
      needs: CI
+     if: github.ref != 'refs/heads/main'
      uses: ./.github/workflows/CD.yml
      secrets: inherit
  
