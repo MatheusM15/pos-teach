@@ -1,1 +1,13 @@
+name: SonarCloud
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  build_CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run CI
+        uses: ./.github/workflows/CI.yml
