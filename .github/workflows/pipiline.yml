@@ -9,8 +9,5 @@ on:
       - main # Mude para o nome da sua branch principal, se necessário
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run CI
-      uses: ./.github/workflows/CI.yml
+  compliance:
+    uses: MatheusM15/pos-teach/.github/workflows/compliance.yml@main
