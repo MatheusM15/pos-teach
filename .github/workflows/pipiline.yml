@@ -9,5 +9,6 @@ on:
       - main # Mude para o nome da sua branch principal, se necessário
 
 jobs:
-  compliance:
-    uses: MatheusM15/pos-teach/.github/workflows/compliance.yml@main
+  Deploy_ECS:
+     uses: ./.github/workflows/CI.yml
+     secrets: inherit
