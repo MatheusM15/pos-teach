@@ -12,4 +12,8 @@ jobs:
   CI:
      uses: ./.github/workflows/CI.yml
      secrets: inherit
+
+  CD:
+     uses: ./.github/workflows/CI.yml
+     secrets: inherit
  
